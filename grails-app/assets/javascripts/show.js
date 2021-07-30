@@ -1109,7 +1109,7 @@ const loadRedlistAssessments = (function() {
     };
 
     function load(taxonID) {
-        var endpoint = '/bie-hub/proxy/plutof/redbook/red-list-assessments';
+        var endpoint = '/bie-hub/proxy/plutof/redbook/red-list-assessments/';
         var params = {
             taxon_node: taxonID,
             red_list: 1,  // Only show assessments of the official Estonian Red List
