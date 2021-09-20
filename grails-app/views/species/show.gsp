@@ -5,7 +5,6 @@
 <g:set var="speciesListUrl" value="${grailsApplication.config.lists.ui.url}" />
 <g:set var="spatialPortalUrl" value="${grailsApplication.config.spatial.ui.url}" />
 <g:set var="collectoryUrl" value="${grailsApplication.config.collectory.ui.url}" />
-<g:set var="alertsUrl" value="${grailsApplication.config.alerts.ui.url}" />
 <g:set var="guid" value="${tc?.previousGuid ?: tc?.taxonConcept?.guid ?: ''}" />
 
 <g:set var="synonymsQuery">
@@ -421,11 +420,7 @@
                 speciesListUrl:     "${grailsApplication.config.lists.ui.url}",
                 bieUrl:             "${grailsApplication.config.bie.ui.url}",
                 bieServiceUrl:      "${grailsApplication.config.bie.index.url}",
-                alertsUrl:          "${grailsApplication.config.alerts.ui.url}",
-                remoteUser:         "${request.remoteUser ?: ''}",
-                eolUrl:             "${raw(createLink(controller: 'externalSite', action: 'eol', params: [s: tc?.taxonConcept?.nameString ?: '', f:tc?.classification?.class ?: tc?.classification?.phylum ?: '']))}",
                 soundUrl:           "${createLink(controller: 'species', action: 'soundSearch', params: [s: tc?.taxonConcept?.nameString ?: ''])}",  // FixMe: do somthing so that it starts working
-                eolLanguage:        "${grailsApplication.config.eol.lang}",
                 defaultDecimalLatitude: "${grailsApplication.config.defaultDecimalLatitude}",
                 defaultDecimalLongitude: "${grailsApplication.config.defaultDecimalLongitude}",
                 defaultZoomLevel: "${grailsApplication.config.defaultZoomLevel}",
