@@ -119,6 +119,22 @@
                         <a href="${request?.contextPath}/species/${child.guid}#classification">
                             ${raw(taxonLabel.trim())}
                         </a>
+
+                        <g:if test="${child.synonyms}">
+                            <g:each in="${child.synonyms}" var="synonym">
+                                <span>
+                                    =
+
+                                    <a href="${request?.contextPath}/species/${synonym.guid}#classification">
+                                        ${synonym.name}
+
+                                        <g:if test="${synonym.occurrenceCount}">
+                                            (${synonym.occurrenceCount})
+                                        </g:if>
+                                    </a>
+                                </span>
+                            </g:each>
+                        </g:if>
                     </dd>
                 </g:each>
             </dl>

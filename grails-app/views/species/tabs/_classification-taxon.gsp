@@ -5,7 +5,6 @@
 </span>
 ${taxon.commonName ?: ""}
 
-
 <g:if test="${taxon.occurrenceCount}">
     (${taxon.occurrenceCount})
 </g:if>
